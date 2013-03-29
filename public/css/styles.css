@@ -1,0 +1,407 @@
+
+
+/* BOOTSTRAP OVERRIDES
+	-------------------------------------------------- */
+	.container {
+		width: 972px;
+	}
+
+	.span3 {
+		width: 210px;
+	}
+
+
+/* CUSTOMIZE THE HEADER
+	-------------------------------------------------- */
+
+	.branding {
+		padding-top: 35px;
+      	padding-bottom: 30px;
+	}
+
+	.social ul {
+		text-decoration: none;
+	}
+
+	.social li {
+		float: left;
+		list-style: none;
+		margin-right:15px;
+	}
+
+
+/* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    .main-menu{
+    	border-bottom: 1px solid #D4D4D4;	
+    }
+
+    .custom-navbar-inner {
+    	min-height: 40px;
+		padding-right: 20px;
+		padding-left: 20px;
+		border-left:1px solid #D4D4D4;
+		border-right:1px solid #D4D4D4; 
+		
+    }
+
+    .navbar {
+    	margin-bottom:0px;
+    }
+
+    .navbar .nav > .custom-active > a, 
+    .navbar .nav > .custom-active > a:hover, 
+    .navbar .nav > .custom-active > a:focus {
+		color: #FA4949;
+		text-decoration: none;
+	}
+
+	.navbar .nav > li > a:focus, 
+	.navbar .nav > li > a:hover {
+		color: #FA4949 !important;
+	}
+
+	.navbar .nav > li {
+		padding: 20px 5px 20px;
+
+	}
+
+	.navbar .nav > li > a {
+		font-size: 0.75em;
+		padding: 0px 10px 0px 0px;
+		border-right: 1px solid #DDD;
+		color: #555;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
+	.navbar .nav > li > a :last-child{
+		border-right: none !important;
+	}
+    
+
+    .header {
+      background: #EAE9E4 url(../img/bg-header.png);
+      border-bottom: 1px solid #DDD;
+      margin-bottom: 0;
+      border-top: 7px solid #292929;
+      height: 125px;
+    }
+
+    .header h1 {
+      padding-top: 35px;
+      padding-bottom: 30px;
+    }
+
+    .header h1 a {
+      color: #444;
+      font-size: 34px;
+      text-shadow: 0px -1px 1px white;
+      text-decoration: none;
+    }
+
+    .header h1 a:active,
+    .header h1 a:hover {
+      color: #FA4949 !important;
+    }
+
+
+
+
+    .top-color{
+      border-top: 7px solid #F50;
+      margin-top: -7px;
+    }
+
+    .slider-wrapper {
+      background: white url(../img/p13.png) !important;
+      height:300px;
+    }
+
+
+
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    .slider {
+
+    }
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 300px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+    /* FILTER MENU 
+    -------------------------------------------------- */
+    .filter-menu{
+    	border-bottom: 1px solid #D4D4D4;
+    }
+
+    /* PORTFOLIO
+    -------------------------------------------------- */
+    .portfolio-wrapper{
+/*    	border-bottom: 1px solid #D4D4D4;
+*/    }
+
+    .portfolio{
+    	height:700px;
+    	border-left:1px solid #D4D4D4;
+		border-right:1px solid #D4D4D4; 
+    }
+
+    .portfolio-items{
+    	padding-top: 20px;
+    	text-align:center;
+
+    }
+
+    
+
+    .portfolio-items li {
+    	list-style: none;
+    	margin-left:0px;
+    	margin-right:20px;
+    	min-height: 300px;
+    }
+
+    .portfolio-items > li :last-child{
+    	margin-right: none;
+    }
+
+    /* SOCIAL MEDIA
+    -------------------------------------------------- */
+    .social-media {
+    	background: #FA4949;
+    	min-height:20px;
+    	color: #fff;
+    	padding:20px 20px 20px 20px;
+    }
+
+    .social-media-icon {
+    	float: left;
+		width: 30px;
+		margin-right: 10px;
+		margin-top: -6px;
+		margin-left: 10px;
+    }
+
+    .social-media p {
+    	margin: 0px;
+    }
+
+
+
+
+    /* FOOTER
+    -------------------------------------------------- */
+
+    .footer-wrapper { 
+    	background: #EAE9E4 url(../img/bg-header.png);
+/*    	min-height:300px;
+*/
+    }
+
+    .footer{
+    	padding:20px;
+		background: #292929;
+		min-height: 300px;
+    }
+
+    .footer-items {
+    }
+
+    .footer ul {
+    	display: block;
+    	list-style: none;
+    }
+
+    .footer li {
+    	float: left;
+		width: 210px;
+		padding: 10px 0px 10px 0px;
+		margin: 10px 10px 10px 10px;
+    }
+
+    .category-header {
+    	color: #DDD;
+		text-transform: uppercase;
+		font-size: 12px;
+		border-bottom: 1px solid #444;
+		margin-bottom: 10px
+    }
+
+
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
