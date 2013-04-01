@@ -5,10 +5,11 @@
 
 var express = require('express')
   , routes = require('./routes')
+  , api = require('./routes/api')
   , http = require('http')
   , path = require('path');
 
-var app = express();
+var app = module.exports = express();
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -24,17 +25,23 @@ app.configure(function(){
 });
 
 app.configure('development', function(){
-  app.use(express.errorHandler());
+  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
 app.get('/', routes.index);
+app.get('/admin', routes.admin);
+app.get('/partials/:name', routes.partials);
+app.get('/adminPartials/:name', routes.adminPartials);
+
 
 // JSON api
-// app.get('/api/paintings', api.paintings);
-// app.get('api/painting/:id', api.painting);
-// app.post('api/painting', api.addPainting);
+app.get('/api/paintings', api.paintings);
+app.get('/api/painting/:id', api.painting);
+app.post('/api/painting', api.addPainting);
 // app.put('api/painting', api.editPainting);
 // app.delete('api/painting/:id', api.removePaiting);
+
+app.get('/admin/*', routes.admin);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

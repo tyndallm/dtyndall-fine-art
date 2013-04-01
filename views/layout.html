@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="artistApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Artist App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      color: #5a5a5a;
+    }
+
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container top-color">
+      </div>
+      <div class="container">
+        <div>
+          <h1>
+          <a href="#">David Tyndall</a>
+          <small> FINE ART</small>
+          <div class="pull-right social">
+            <ul id="social">
+            
+                          
+                <li><a href="http://www.facebook.com/pages/Siiimple/174221319304233" data-placement="above" rel="external" data-original-title="Facebook"><img src="http://themes.siiimple.com/zoho/wp-content/themes/zoho/framework/images/facebook.png"></a></li>
+                  
+                            
+                          
+                <li><a href="Siiimple" data-placement="above" rel="external" data-original-title="Twitter"><img src="http://themes.siiimple.com/zoho/wp-content/themes/zoho/framework/images/tweet.png"></a></li>
+                  
+                              
+                          
+                <li><a href="http://www.siiimple.com" data-placement="above" rel="external" data-original-title="Flickr"><img src="http://themes.siiimple.com/zoho/wp-content/themes/zoho/framework/images/flickr.png"></a></li>
+                  
+                              
+                          
+                <li><a href="http://www.siiimple.com" data-placement="above" rel="external" data-original-title="Email"><img src="http://themes.siiimple.com/zoho/wp-content/themes/zoho/framework/images/mail.png"></a></li>
+                  
+                              
+                          
+                <li><a href="http://themes.siiimple.com/zoho/feed" data-placement="above" rel="external" data-original-title="RSS"><img src="http://themes.siiimple.com/zoho/wp-content/themes/zoho/framework/images/rss.png"></a></li>
+                  
+                              
+            <!-- END SOCIAL -->
+            </ul>
+          </div>
+        </h1>
+
+        </div>
+
+      </div>
+
+    </header>
+
+    <!-- Main menu -->
+    <div class="main-menu">
+      <div class="container">
+
+        <div class="navbar" ng-controller="MainNavCtrl">
+          <div class="custom-navbar-inner">
+            <div class="container">
+              <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <div class="nav-collapse collapse">
+                <ul class="nav">
+                  <li ng-class="{customActive: routeIs('/')}"><a href="/">Home</a></li>
+                  <li ng-class="{customActive: routeIs('/about')}"><a href="/about">About</a></li>
+                  <li ng-class="{customActive: routeIs('/blog')}"><a href="#blog">Blog</a></li>
+                  <li ng-class="{customActive: routeIs('/contact')}"><a href="/contact">Contact</a></li>
+                  
+                </ul>
+                
+              </div><!--/.nav-collapse -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <ng-view></ng-view>
+
+    <div class="footer-wrapper">
+      <div class="container">
+        <!-- FOOTER -->
+          <div class="footer">
+            <div class="row footer-items">
+              <ul class="footer-categories">
+                <li class="footer-category">
+                  <h4 class="category-header">Recent Posts</h4>
+
+                </li>
+                <li class="footer-category"><h4 class="category-header">Recent Paintings</h4></li>
+                <li class="footer-category"><h4 class="category-header">Recent Tweets</h4></li>
+                <li class="footer-category"><h4 class="category-header">Contact</h4></li>
+              </ul>
+            </div>
+            <div>
+              <p class="pull-right"><a href="#">Back to top</a></p>
+              <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+            </div>
+          </div>
+      </div>
+
+    </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+    <script src="../js/lib/ui-bootstrap-0.2.0.min.js"></script>
+    <script src="../js/site/app.js"></script>
+    <script src="../js/site/controllers.js"></script>
+  </body>
+</html>
