@@ -1,7 +1,7 @@
 'use strict';
 
 
-var app = angular.module('artistAdminApp', []).
+var app = angular.module('artistAdminApp', ['ui.bootstrap']).
 	config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
 		//make sure user is logged in
@@ -11,6 +11,7 @@ var app = angular.module('artistAdminApp', []).
 		//     }  
 		// });
 
+		//don't define controllers in both here and in partial!!!!!!!!!
 		$routeProvider.when("/", { 
 			templateUrl: "/adminPartials/dashboard"
 		})
@@ -19,6 +20,9 @@ var app = angular.module('artistAdminApp', []).
 		})
 		$routeProvider.when("/paintings", {
 			templateUrl: "/adminPartials/paintings"
+		})
+		$routeProvider.when("/mailinglist", {
+			templateUrl: "/adminPartials/mailinglist"
 		})
 		$routeProvider.otherwise({redirectTo: '/'});
 

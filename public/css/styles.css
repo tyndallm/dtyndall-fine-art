@@ -331,9 +331,20 @@
     /* About Page
     -------------------------------------------------- */
     .aboutContent {
+      padding:20px;
       border-left: 1px solid #D4D4D4;
       border-right: 1px solid #D4D4D4;
     }
+
+    /* Portfolio Page
+    -------------------------------------------------- */
+    .portfolioPage {
+      padding:20px;
+      height:700px;
+      border-left:1px solid #D4D4D4;
+      border-right:1px solid #D4D4D4; 
+    }  
+      
 
 
 

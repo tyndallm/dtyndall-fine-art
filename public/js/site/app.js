@@ -8,10 +8,13 @@ var app = angular.module('artistApp', ['ui.bootstrap']).
 			templateUrl: "/partials/home"
 		})
 		$routeProvider.when("/artwork/:id", {
-			templateUrl: "/partials/artwork"
+			templateUrl: "/partials/detail"
 		})
 		$routeProvider.when("/about", {
 			templateUrl: "/partials/about"
+		})
+		$routeProvider.when("/portfolio", {
+			templateUrl: "/partials/portfolio"
 		})
 		$routeProvider.otherwise({redirectTo: '/'});
 

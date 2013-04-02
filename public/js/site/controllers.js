@@ -23,7 +23,31 @@ function PortfolioCtrl($scope, $location, $http) {
 		    // or server returns response with an error status.
 		    console.log("problem fetching paintings");
 		});
-	};
+	}
 
 	$scope.fetchPaintings();
 };
+
+function SliderCtrl($scope, $location, $http) {
+
+};
+
+function DetailCtrl($scope, $location, $http, $routeParams) {
+	$scope.artworkId = $routeParams.id;
+	$scope.fetchPainting = function() {
+		$http({method: 'GET', url: '../api/painting/' + $scope.artworkId}).
+			success(function(data, status, headers, config) {
+				$scope.painting = data;
+				console.log($scope.painting);
+			}).
+			error(function(data, status, headers, config) {
+				console.log("problem fetching painting: ", status);
+			});
+	}
+
+	$scope.fetchPainting();
+};
+
+
+
+

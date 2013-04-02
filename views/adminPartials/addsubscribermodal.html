@@ -1,0 +1,36 @@
+	<div class="modal-header">
+		<h1>Add a subscriber</h1>
+	</div>
+	<div class="modal-body">
+		<form class="form-horizontal">
+		  <div class="control-group">
+		    <label class="control-label" for="inputName">First Name</label>
+		    <div class="controls">
+		      <input type="text" class="input-large" id="inputFirst" placeholder="First Name" ng-model="subscriber.first" required>
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label" for="inputLast">Last Name</label>
+		    <div class="controls">
+		      <input type="text" class="input-large" id="inputLast" placeholder="Last Name" ng-model="subscriber.last" required>
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label" for="inputEmail">Email</label>
+		    <div class="controls">
+		      <input type="text" class="input-large" id="inputEmail" placeholder="Email Address" ng-model="subscriber.email" required>
+		    </div>
+		  </div>
+
+		  <div class="control-group">
+		  	<label class="control-label" for="inputCustomer">Customer</label>
+		    <div class="controls">
+		    	<input id="inputCustomer" type="checkbox" ng-model="subscriber.customer">
+		    </div>
+		  </div>
+		 </form>
+	</div>
+	<div class="modal-footer">
+	    <button ng-click="close(result)" class="btn" >Close</button>
+	    <button ng-click="addSubscriber(subscriber);close()" class="btn btn-primary" >Save</button>
+	</div>

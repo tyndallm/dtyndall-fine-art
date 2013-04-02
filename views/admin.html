@@ -56,7 +56,8 @@
               <li ng-class="{active: routeIs('/paintings')}"><a href="/admin/paintings">Artwork</a></li>
               <li ng-class="{active: routeIs('/customers')}"><a href="/admin/customers">Customers</a></li>
               <li><a href="#contact">Galleries</a></li>
-              <li><a href="#contact">Mailing List</a></li>
+              <li ng-class="{active: routeIs('/sales')}"><a href="/admin/sales">Sales</a></li>
+              <li ng-class="{active: routeIs('/mailinglist')}"><a href="/admin/mailinglist">Mailing List</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -74,8 +75,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+    <script src="../js/lib/ui-bootstrap-0.2.0.min.js"></script>
+
     <script src="../js/admin/admin.js"></script>
     <script src="../js/admin/controllers.js"></script>
 

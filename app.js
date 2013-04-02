@@ -40,8 +40,20 @@ app.get('/api/painting/:id', api.painting);
 app.post('/api/painting', api.addPainting);
 // app.put('api/painting', api.editPainting);
 // app.delete('api/painting/:id', api.removePaiting);
+app.get('/api/mailinglist', api.mailinglist);
+app.post('/api/subscriber', api.addSubscriber);
 
 app.get('/admin/*', routes.admin);
+
+// help out our angular routing
+app.get('/about', routes.index);
+app.get('/contact', routes.index);
+app.get('/portfolio', routes.index);
+app.get('/artwork/:id', routes.index);
+// app.get('^(?!.*admin).*', routes.index);
+
+//app.get('*', routes.index);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

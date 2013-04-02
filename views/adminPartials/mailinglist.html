@@ -1,0 +1,27 @@
+<div class="container" ng-controller="MailingListCtrl">
+
+      <h1>Mailing List</h1>
+      <p>This is a list of all of the individuals currently on your mailing list.</p>
+
+      <a class="btn btn-success btn-block" ng-click="addSubscriber()" >[ + ] Add New Subscriber</a>
+
+      <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Last</th>
+                  <th>First</th>
+                  <th>Email</th>
+                  <th>Subscribed</th>
+                </tr>
+              </thead>
+              <tbody ng-repeat="member in mailinglist">
+              	<tr>
+              		<td>{{member.last}}</td>
+              		<td>{{member.first}}</td>
+              		<td>{{member.email}}</td>
+              		<td>{{member.subscribed}}</td>
+              	</tr>
+              </tbody>
+            </table>
+
+    </div> <!-- /container -->

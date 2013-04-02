@@ -55,7 +55,7 @@ var mailingListSchema = mongoose.Schema(
 	{ first: String,
 	  last: String,
 	  email: String,
-	  customer: Boolean,
+	  customer: { type: Boolean, default: false },
 	  customerId: String,
 	  subscribed: { type: Boolean, default: true }
 	});
@@ -112,6 +112,17 @@ exports.painting = function (req, res) {
 
 };
 
+exports.mailinglist = function (req, res) {
+	MailingList.find(function (err, mailinglist) {
+		if(err) {
+			return res.json({error: "Error fetching mailing list"});
+		}
+		else {
+			res.json(mailinglist);
+		}
+	})
+}
+
 // POST
 exports.addPainting = function (req, res) {
 	console.log(req.body);
@@ -129,6 +140,21 @@ exports.addPainting = function (req, res) {
 	  
 	});
 };
+
+exports.addSubscriber = function (req, res) {
+	var newSubscriber = new MailingList(req.body);
+	console.log(newSubscriber);
+
+	newSubscriber.save(function (err) {
+	  if(err) {
+		  return res.json({error: "Error saving new subscriber"});
+	  } else {
+	  	console.log("Success");
+	  	res.json(newSubscriber);
+	  }
+	  
+	});
+}
 
 
 
