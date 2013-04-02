@@ -76,6 +76,11 @@
 		text-transform: uppercase;
 	}
 
+  /* awesome css selcection!! */
+  .navbar .nav > li:last-child > a{
+    border-right: none;
+  }
+
 	.navbar .nav > li > a :last-child{
 		border-right: none !important;
 	}
@@ -344,6 +349,17 @@
       border-left:1px solid #D4D4D4;
       border-right:1px solid #D4D4D4; 
     }  
+
+
+
+    /* ADMIN PAGES
+    ------------------------------------------------- */
+
+    /* Mailing List
+    ------------------------------------------------- */
+    .mailingControls {
+      margin-bottom:20px;
+    }
       
 
 

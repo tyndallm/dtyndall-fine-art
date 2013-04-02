@@ -156,5 +156,14 @@ exports.addSubscriber = function (req, res) {
 	});
 }
 
+// DELETE
+
+exports.removeSubscriber = function (req, res){
+	var subscriberId = req.params.id;
+	console.log(subscriberId);
+	MailingList.find({ _id: subscriberId }).remove();
+	return res.json({success: "removed subscriber " + subscriberId});
+}
+
 
 

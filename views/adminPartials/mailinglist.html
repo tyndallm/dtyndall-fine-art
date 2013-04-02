@@ -1,27 +1,41 @@
 <div class="container" ng-controller="MailingListCtrl">
+      <div class="row">
+        <h1>Mailing List</h1>
+        <p>Manage all of the subscribers to your mailing list.</p>
+      </div>
+      
 
-      <h1>Mailing List</h1>
-      <p>This is a list of all of the individuals currently on your mailing list.</p>
+      <div class="row mailingControls">
+        <a class="btn btn-success" ng-click="addSubscriber()" ><i class="icon-plus icon-white"></i> Add Subscriber</a>
+        <span class="pull-right">
+          <input type="text" class="search-query" ng-model="query" placeholder="Search">
+        </span>
+      </div>
 
-      <a class="btn btn-success btn-block" ng-click="addSubscriber()" >[ + ] Add New Subscriber</a>
-
-      <table class="table table-striped">
+      <div class="row">
+        <table class="table table-striped ">
               <thead>
                 <tr>
                   <th>Last</th>
                   <th>First</th>
                   <th>Email</th>
-                  <th>Subscribed</th>
+                  <th></th>
                 </tr>
               </thead>
-              <tbody ng-repeat="member in mailinglist">
-              	<tr>
-              		<td>{{member.last}}</td>
-              		<td>{{member.first}}</td>
-              		<td>{{member.email}}</td>
-              		<td>{{member.subscribed}}</td>
-              	</tr>
+              <tbody >
+                <tr ng-repeat="member in mailinglist | filter:query | orderBy:orderProp">
+                  <td>{{member.last}}</td>
+                  <td>{{member.first}}</td>
+                  <td>{{member.email}}</td>
+                  <td><span class="pull-right">
+                        <!-- <button class="btn" ng-click="">edit <i class="icon-edit"></i></button>
+                        <button class="btn btn-danger" ng-click="removeSubscriber(member._id)">remove <i class="icon-remove icon-white"></i></button> -->
+                        <button type="button" class="close" ng-click="removeSubscriber(member._id)">×</button>
+                      </spam>
+                  </td>
+                </tr>
               </tbody>
             </table>
-
+      </div>
+      
     </div> <!-- /container -->

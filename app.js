@@ -42,6 +42,7 @@ app.post('/api/painting', api.addPainting);
 // app.delete('api/painting/:id', api.removePaiting);
 app.get('/api/mailinglist', api.mailinglist);
 app.post('/api/subscriber', api.addSubscriber);
+app.delete('/api/removeSubscriber/:id', api.removeSubscriber);
 
 app.get('/admin/*', routes.admin);
 

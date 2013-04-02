@@ -60,6 +60,18 @@ function MailingListCtrl($scope, $location, $http, $dialog) {
 			});
 	}
 
+	$scope.removeSubscriber = function(subscriberId) {
+		$http({method: 'DELETE', url: '../api/removeSubscriber/' + subscriberId }).
+			success(function(data, status, headers, config) {
+				console.log(data);
+				//refresh table
+				$scope.fetchMailingList();
+			}).
+			error(function(data, status, headers, config) {
+				console.log("problem deleting subscriber: ", status);
+			});
+	}
+
 	$scope.fetchMailingList();
 
 

@@ -44,11 +44,6 @@
     <div class="navbar navbar-inverse navbar-fixed-top" ng-controller="AdminNavCtrl">
       <div class="navbar-inner">
         <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
           <a class="brand" href="#">Artist Admin Portal</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
@@ -60,6 +55,12 @@
               <li ng-class="{active: routeIs('/mailinglist')}"><a href="/admin/mailinglist">Mailing List</a></li>
             </ul>
           </div><!--/.nav-collapse -->
+
+          <div class="pull-right">
+            <ul class="nav">
+              <li><a href="/">Back to site</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
