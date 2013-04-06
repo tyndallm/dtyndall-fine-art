@@ -1,11 +1,17 @@
 <div class="container" ng-controller="PaintingsCtrl">
-
-      <h1>Artwork</h1>
-      <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
-
-      <a class="btn btn-success btn-block" href="" >[ + ] Add New Painting</a>
-
-      <table class="table table-striped">
+      <div class="row">
+        <h1>Artwork</h1>
+        <p>Manage all of your art inventory.</p>
+      </div>
+      
+      <div class="row pageControls">
+        <a class="btn btn-success" ng-click="addPainting()" ><i class="icon-plus icon-white"></i> Add Painting</a>
+        <span class="pull-right">
+          <input type="text" class="search-query" ng-model="query" placeholder="Search">
+        </span>
+      </div>
+      <div class="row">
+        <table class="table table-striped">
               <thead>
                 <tr>
                   <th>#</th>
@@ -14,32 +20,17 @@
                   <th>Sold</th>
                 </tr>
               </thead>
-              <tbody ng-repeat="painting in paintingsList">
-              	<tr>
-              		<td>1</td>
-              		<td>{{painting.title}}</td>
-              		<td>{{painting.description}}</td>
-              		<td>{{painting.sold}}</td>
-              	</tr>
-                <!-- <tr>
+              <tbody ng-repeat="painting in paintingsList | filter:query | orderBy:orderProp">
+                <tr>
                   <td>1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
+                  <td>{{painting.title}}</td>
+                  <td>{{painting.description}}</td>
+                  <td>{{painting.sold}}</td>
+                  <td><span class="pull-right"><button class="btn" ng-click="editPainting(painting._id)">Edit <i class="icon-edit"></i></button></span></td>
                 </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>@twitter</td>
-                </tr> -->
               </tbody>
             </table>
+      </div>
+      
 
     </div> <!-- /container -->

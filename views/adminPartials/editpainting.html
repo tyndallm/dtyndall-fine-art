@@ -1,0 +1,71 @@
+<div class="container" ng-controller="EditPaintingCtrl">
+      <div class="row">
+        <h1>Edit Artwork</h1>
+        <p>Update and change information related to art piece.</p>
+      </div>
+      
+      <div class="row">
+        <table class="table table-striped table-bordered">
+              <tbody>
+                <tr>
+                  <td><b>Title</b></td>
+                  <td><input class="input-block-level" type="text" ng-model="artwork.title"></td>
+                  <td><p class="muted">Edit the title of your work.</p></td>
+                </tr>
+                <tr>
+                  <td><b>Description</b></td>
+                  <td>
+                    <textarea class="input-block-level" type="text" ng-model="artwork.description" rows="3"></textarea></td>
+                  <td><p class="muted">Enter a description of this piece.</p></td>
+                </tr>
+                <tr>
+                  <td><b>Dimensions</b></td>
+                  <td><input class="input" type="text" ng-model="artwork.dimensions.height"><input class="input" type="text" ng-model="artwork.dimensions.width"></td>
+                  <td><p class="muted">Enter the height and width of the piece</p></td>
+                </tr>
+                <tr>
+                  <td><b>Medium</b></td>
+                  <td><input class="input-block-level" type="text" ng-model="artwork.medium"></td>
+                  <td><p class="muted">The mediums used in this piece.</p></td>
+                </tr>
+                <tr>
+                  <td><b>Available</b></td>
+                  <td><input type="checkbox" ng-model="artwork.available"></td>
+                  <td><p class="muted">Is this artwork available for purchase?</p></td>
+                </tr>
+                <tr>
+                  <td><b>Price</b></td>
+                  <td>
+                    <div class="input-prepend">
+                      <span class="add-on">$</span>
+                      <input class="input-block-level" id="prependedInput" type="text" ng-model="artwork.price">
+                    </div>
+                  <td><p class="muted">The selling price for this piece, leave empty if not for sale</p></td>
+                </tr>
+                <tr>
+                  <td><b>Sold</b></td>
+                  <td><input type="checkbox" ng-model="artwork.sold"></td>
+                  <td><p class="muted">Has this piece been sold?</p></td>
+                </tr>
+                <tr>
+                  <td><b>Sold On</b></td>
+                  <td><input class="input-block-level" type="text" ng-model="artwork.soldOn"></td>
+                  <td><p class="muted">The date this piece was sold.</p></td>
+                </tr>                 
+                <tr>
+                  <td><b>Sold To</b></td>
+                  <td>
+                    <input class="input-block-level" type="text" ng-model="artwork.soldTo"></td>
+                  <td><p class="muted">The customer this piece was sold to.</p></td>
+                </tr>
+                <tr>
+                  <td><b>Location</b></td>
+                  <td><input class="input-block-level" type="text" ng-model="artwork.location"></td>
+                  <td><p class="muted">The current location of this piece.  ex. Gallery, Friend's house, etc.</p></td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+      
+
+    </div> <!-- /container -->

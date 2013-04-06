@@ -25,6 +25,11 @@ function PaintingsCtrl($scope, $location, $http) {
 		});
 	};
 
+	$scope.editPainting = function(paintingId){
+		console.log("edit clicked for: ", paintingId);
+		$location.path('/paintings/' + paintingId);
+	}
+
 	$scope.fetchPaintings();
 };
 
@@ -105,5 +110,54 @@ function MailingListModalCtrl($scope, $location, $http, dialog) {
 	$scope.close = function(result){
 	    dialog.close(result);
 	  };
+	
+};
+
+function EditPaintingCtrl($scope, $location, $http, $routeParams) {
+	var paintingId = $routeParams.id;
+
+	$scope.fetchPainting = function(id){
+		$http({method: 'GET', url: '../api/painting/' + id}).
+			success(function(data, status, headers, config) {
+				$scope.artwork = data[0]; // returns an array of objects, we're only expecting one so we select the first one
+				console.log($scope.artwork);
+			}).
+			error(function(data, status, headers, config) {
+				console.log("problem fetching artwork: ", status);
+			});
+
+	};
+
+	$scope.updatePainting = function(updatedPainting){
+		$http({ url: '../api/painting',
+				method: 'PUT',
+				data: { 
+					"title": "Test Painting",
+				    "description": "This is a test painting. Lorem ipsum dolor it",
+				    "price": "$1499.00",
+				    "medium": "oiloncanvas",
+				    "available": "true",
+				    "image": "http://placehold.it/600x800.png",
+				    "thumbImage": "http://placehold.it/175x175.png",
+					"first": subscriber.first,
+						"last": subscriber.last,
+						"email": subscriber.email,
+						"customer": subscriber.customer
+						 }
+		}).success(function(data, status, headers, config) {
+		    // this callback will be called asynchronously
+		    // when the response is available
+		    $scope.data = data;
+		    console.log($scope.data);
+		  }).
+		  error(function(data, status, headers, config) {
+		    // called asynchronously if an error occurs
+		    // or server returns response with an error status.
+		    $scope.status = status;
+		    console.log($scope.status);
+		});
+	}
+
+	$scope.fetchPainting(paintingId);
 	
 };

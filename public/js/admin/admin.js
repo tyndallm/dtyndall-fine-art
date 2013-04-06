@@ -21,6 +21,9 @@ var app = angular.module('artistAdminApp', ['ui.bootstrap']).
 		$routeProvider.when("/paintings", {
 			templateUrl: "/adminPartials/paintings"
 		})
+		$routeProvider.when("/paintings/:id", {
+			templateUrl: "/adminPartials/editpainting"
+		})
 		$routeProvider.when("/mailinglist", {
 			templateUrl: "/adminPartials/mailinglist"
 		})

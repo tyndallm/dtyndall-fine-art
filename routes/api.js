@@ -37,6 +37,18 @@ var paintingSchema = mongoose.Schema(
       thumbImage: String
     });
 
+/* Painting json
+
+	"title": "Test Painting",
+    "description": "This is a test painting. Lorem ipsum dolor it",
+    "price": "$1499.00",
+    "medium": "oiloncanvas",
+    "available": "true",
+    "image": "http://placehold.it/600x800.png",
+    "thumbImage": "http://placehold.it/175x175.png"
+
+*/
+
 var customerSchema = mongoose.Schema(
 	{ first: String,
 	  last: String,
@@ -100,7 +112,7 @@ exports.paintings = function (req, res) {
 
 exports.painting = function (req, res) {
 	var paintingId = req.params.id;
-
+	console.log("Server reqId: ", paintingId);
 	Painting.find({ _id: paintingId }, function(err, painting) {
 		if(err) {
 		  return res.json({error: "Error fetching painting" });
@@ -114,6 +126,7 @@ exports.painting = function (req, res) {
 
 exports.mailinglist = function (req, res) {
 	MailingList.find(function (err, mailinglist) {
+		console.log(req);
 		if(err) {
 			return res.json({error: "Error fetching mailing list"});
 		}
@@ -141,6 +154,7 @@ exports.addPainting = function (req, res) {
 	});
 };
 
+
 exports.addSubscriber = function (req, res) {
 	var newSubscriber = new MailingList(req.body);
 	console.log(newSubscriber);
@@ -155,6 +169,19 @@ exports.addSubscriber = function (req, res) {
 	  
 	});
 }
+
+// PUT
+
+exports.editPainting = function (req, res) {
+	var paintingId = req.params.id;
+	var query = { _id: paintingId };
+
+	var updatedPainting = req.body();
+	console.log(updatedPainting);
+
+	Painting.findOneAndUpdate(query, updatedPainting, options, callback);
+	res.json(updatedPainting);
+};
 
 // DELETE
 

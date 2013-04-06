@@ -38,7 +38,8 @@ app.get('/adminPartials/:name', routes.adminPartials);
 app.get('/api/paintings', api.paintings);
 app.get('/api/painting/:id', api.painting);
 app.post('/api/painting', api.addPainting);
-// app.put('api/painting', api.editPainting);
+app.put('api/painting/:id', api.editPainting);
+
 // app.delete('api/painting/:id', api.removePaiting);
 app.get('/api/mailinglist', api.mailinglist);
 app.post('/api/subscriber', api.addSubscriber);
