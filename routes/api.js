@@ -7,7 +7,8 @@ var mongoose = require('mongoose'),
 
 // Set up MongoDB connection
 //var mongoURI = 'mongodb://tyndallm:11526HHTx105@linus.mongohq.com:10084/appstore';
-var mongoURI = 'mongodb://127.0.0.1:27017/artist';
+// var mongoURI = 'mongodb://127.0.0.1:27017/artist';
+var mongoURI = "mongodb://tyndallm:11526HHTx105@dharma.mongohq.com:10007/artist";
 console.log('connecting to database on MongoHQ...');
 mongoose.connect(mongoURI);
 
