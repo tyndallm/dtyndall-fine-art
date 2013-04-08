@@ -12,7 +12,7 @@ var express = require('express')
 var app = module.exports = express();
 
 app.configure(function(){
-  app.set('port', process.env.PORT || 80);
+  app.set('port', process.env.PORT || 8080);
   app.engine('.html', require('ejs').__express);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'html');
